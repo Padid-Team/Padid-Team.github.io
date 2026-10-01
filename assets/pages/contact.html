@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Padid</title>
+<meta name="description" content="Send a message to the padid team.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 40'%3E%3Cpath fill='%23C8A96A' fill-rule='evenodd' d='M6 2h15a11 11 0 0 1 0 22h-7v14H6zM14 10v7h7a3.5 3.5 0 0 0 0-7z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/index.html" aria-label="padid home">
+      <svg viewBox="0 0 36 40" aria-hidden="true"><path fill-rule="evenodd" d="M6 2h15a11 11 0 0 1 0 22h-7v14H6zM14 10v7h7a3.5 3.5 0 0 0 0-7z"/></svg>
+      Padid
+    </a>
+    <nav>
+      <a href="/index.html#project">Project</a>
+      <a href="/index.html#team">Team</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1>Write to us.</h1>
+    <p>Tell us what is on your mind. We read every message.</p>
+  </div>
+
+  <div class="wrap">
+    <section class="row">
+      <h2>Message</h2>
+      <div>
+        <form id="contactForm">
+          <label>Your name
+            <input name="name" type="text" autocomplete="name" required>
+          </label>
+          <label>Your email
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+          <label>Subject
+            <input name="subject" type="text" required>
+          </label>
+          <label>Message
+            <textarea name="message" required></textarea>
+          </label>
+          <button type="submit">Send message</button>
+          <p class="note">Sending opens your email app with the message ready. You can also write to <a data-mail href="#"></a>.</p>
+        </form>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span data-year></span> Padid</span>
+    <span><a data-github href="#">GitHub</a></span>
+  </div>
+</footer>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

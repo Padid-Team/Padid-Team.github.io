@@ -1,0 +1,63 @@
+/* Theme tokens. For dark mode later, override these under [data-theme="dark"] or a prefers-color-scheme query. */
+:root{
+  --bg:#F7F7F6;
+  --ink:#1F2126;
+  --text:#555A63;
+  --line:#DCDDE0;
+  --gold:#C8A96A;
+  --gold-ink:#7A5E26;
+  --field:#FFFFFF;
+  --font:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--text);font:400 1.0625rem/1.7 var(--font);-webkit-font-smoothing:antialiased}
+a{color:var(--gold-ink);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:960px;margin-inline:auto;padding-inline:24px}
+
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:72px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--text);font-weight:500;font-size:1.2rem;text-decoration:none}
+.brand svg{width:22px;height:25px;fill:var(--gold)}
+nav{display:flex;gap:26px;font-size:.98rem}
+nav a{color:var(--text);text-decoration:none}
+nav a:hover,nav a[aria-current]{color:var(--ink)}
+nav a[aria-current]{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:6px}
+
+.hero{padding-block:88px 96px}
+h1{color:var(--ink);font-weight:500;font-size:clamp(2.2rem,5.6vw,3.7rem);line-height:1.12;letter-spacing:-.025em;max-width:16ch}
+.hero p{margin-top:24px;max-width:46ch;font-size:1.2rem}
+
+.row{display:grid;grid-template-columns:200px 1fr;gap:24px;border-top:1px solid var(--line);padding-block:48px}
+.row>h2{color:var(--ink);font-size:1rem;font-weight:500}
+h3{color:var(--ink);font-weight:500;font-size:1.6rem;letter-spacing:-.01em;margin-bottom:12px}
+.row p+p{margin-top:14px}
+.row p{max-width:58ch}
+
+dl{display:grid;grid-template-columns:110px 1fr;gap:8px 16px;margin-top:28px;font-size:.98rem}
+dt{color:var(--text)}
+dd{color:var(--ink)}
+
+.people{list-style:none;padding:0}
+.people li{display:grid;grid-template-columns:1fr 1fr auto;gap:16px;padding-block:14px;border-bottom:1px solid var(--line)}
+.people li:first-child{padding-top:0}
+.people b{color:var(--ink);font-weight:500}
+
+form{display:grid;gap:18px;max-width:520px}
+label{display:grid;gap:6px;color:var(--ink);font-size:.95rem;font-weight:500}
+input,textarea{font:inherit;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:4px;padding:10px 12px;width:100%}
+textarea{min-height:160px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:0;border-color:var(--gold)}
+button{justify-self:start;font:inherit;font-weight:500;color:var(--ink);background:var(--gold);border:0;border-radius:4px;padding:11px 24px;cursor:pointer}
+button:hover{background:#d6ba7e}
+.note{font-size:.92rem}
+
+footer{border-top:1px solid var(--line);margin-top:48px;padding-block:32px;font-size:.93rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+@media (max-width:720px){
+  .row{grid-template-columns:1fr;gap:12px;padding-block:36px}
+  .hero{padding-block:56px 64px}
+  .people li{grid-template-columns:1fr;gap:2px}
+  nav{gap:18px}
+}
